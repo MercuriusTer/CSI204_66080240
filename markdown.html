@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop #3: Learning-MarkdownTag</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <h1>Example: MarkdownTag</h1>
+    <p>MarkdownTag is a simple tag that can be used to render markdown text.</p>
+    <h2>MarkdownTag Result: ...</h2>
+    <div id="MDContent"></div>
+    <script>
+        var data = `## Marked in the browser\nRendered by **marked**.\n
+        \n---\n
+        \nProduct\n
+        \n 1. Item Apple\n 2. Item Source\n 3. Item Candy
+* Candy-001
+* Candy-002
+* Candy-003
+        \n---\n
+Link: [Google](https://www.google.com)\n
+Link: [Github](https://www.github.com)\n
+__Bold Text__\n
+_Italic Text_\n
+| Day        | Meal    |  Price  |
+| -----------|---------|---------|
+| Monday     | Pasta   |  50฿    |
+| Tuesday    | Chicken |  40฿    |\n
+\n---\n
+`
+        document.getElementById('MDContent').innerHTML = marked.parse(data);
+      </script>
+
+</body>
+</html>
